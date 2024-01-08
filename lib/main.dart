@@ -449,37 +449,11 @@ final GlobalKey qrKey = GlobalKey(debugLabel: 'QR');
     });
   }
                     
-  //        await subscribeToMachine(machineId);
-         
-  //         _updateSubscribedMachinesUI(machineId);
-
-  //           Navigator.pop(context); 
-  //           displayScannedQrCodeNotification('Successfully scanned Laundry Machine'); //$machineId'
 
        
                    
 
-        
-  //          displayScannedQrCodeNotification('Successfully scanned Laundry Machine'); //$machineId'
-  //      // displayScannedQrCodeNotification('Successfully scanned machine: $machineId');
-  //      // Call setState to update UI
-  //         setState(() {
-  //           qrCodeScanned = true;
-  //         });
-  
-
-  //       } else {
-  //         controller.dispose();
-
-  //         Navigator.pop(context); 
-    
-  //         _updateMachineInUseUI(machineId!);
-  //         displayScannedQrCodeNotification('Invalid QR Code');
-
-  //       }
-  //     }
-  //   });
-  // }
+ 
 //_updateSubscribedMachineUI updates the UI to show  the subscribed machines 
   void _updateSubscribedMachinesUI(String machineId) {
     setState(() {
@@ -518,53 +492,7 @@ Future<void> subscribeToMachine(String machineId) async {
 }
 
 
-// Future<bool> subscribeToMachine(String machineId) async {
-//   final token = await _firebaseMessaging.getToken();
 
-//   const cloudFunctionUrl = 'https://us-central1-lively-option-392317.cloudfunctions.net/subscribeToMachine';
-//   final response = await http.post(
-//     Uri.parse(cloudFunctionUrl),
-//     body: {'machineId': machineId, 'token': token},
-//   );
-
-//   if (response.statusCode == 200) {
-//     // Subscription successful
-//     print('Subscription successful');
-//     return true;
-//   } else if (response.statusCode == 409) {
-//     // Machine is already in use
-//     print('Machine is already in use');
-//    _updateSubscribedMachinesUI(machineId); // Update UI
-
-//     return false;
-//   } else {
-//     // Subscription failed
-//     print('Subscription failed');
-//     return false;
-//   }
-// }
-
-
-
-//shows a dialog when a machine is already in use
-//   void _updateMachineInUseUI(String machineId) {
-//   showDialog(
-//     context: context,
-//     builder: (context) => AlertDialog(
-//       title: const Text('Machine In Use'),
-//       content: Text('This laundry machine is already in use.'),
-//       actions: [
-//         ElevatedButton(
-//           onPressed: () {
-//             Navigator.pop(context);
-//            Navigator.pop(context); // Go back to the previous screen
-//           },
-//           child: const Text('OK'),
-//         ),
-//       ],
-//     ),
-//   );
-// }
 
 
 
@@ -714,65 +642,8 @@ if(sharingCode == null) {
 }
 
 
-// Future<void> subscribeToMachine(String machineId) async {
-//   final token = await _firebaseMessaging.getToken();
-//   //  final sharingCode = generateLaundryCode(); // Generate the sharing code
 
 
-//   const cloudFunctionUrl = 'https://us-central1-lively-option-392317.cloudfunctions.net/subscribeToMachine';
-//   final response = await http.post(
-//     Uri.parse(cloudFunctionUrl),
-//    // body: {'machineId': machineId, 'token': token, 'sharingCode': sharingCode},
-//    body: {'machineId': machineId, 'token': token},
-//   );
-
-//   if (response.statusCode == 200) {
-//     // Subscription successful
-//     print('Subscription successful');
-//    // _updateSubscribedMachinesUI(machineId); // Update UI
-//     //Navigator.pop(context); 
-//     // setState(() {
-//      // subscribedMachines.add(machineId);
-//     //});
-
-//   } else if (response.statusCode == 409) {
-//     // Machine is already in use, show appropriate message to user
-//     print('Machine is already in use');
-//    // _updateMachineInUseUI(machineId); // Update UI
-//   } else {
-//     // Subscription failed
-//     print('Subscription failed');
-//   }
-// }
-// Future<void> subscribeToMachine(String machineId) async {
-//   final token = await _firebaseMessaging.getToken();
-//     //final sharingCode = generateLaundryCode(); // Generate the sharing code
-
-
-//   const cloudFunctionUrl = 'https://us-central1-lively-option-392317.cloudfunctions.net/subscribeToMachine';
-//   final response = await http.post(
-//     Uri.parse(cloudFunctionUrl),
-//     body: {'machineId': machineId, 'token': token},
-//   );
-
-//   if (response.statusCode == 200) {
-//     // Subscription successful
-//     print('Subscription successful');
-//     _updateSubscribedMachinesUI(machineId); // Update UI
-//     //Navigator.pop(context); 
-//      setState(() {
-//       subscribedMachines.add(machineId);
-//     });
-
-//   } else if (response.statusCode == 409) {
-//     // Machine is already in use, show appropriate message to user
-//     print('Machine is already in use');
-//     _updateMachineInUseUI(machineId); // Update UI
-//   } else {
-//     // Subscription failed
-//     print('Subscription failed');
-//   }
-// }
 
 
   
